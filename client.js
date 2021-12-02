@@ -18,7 +18,7 @@ const connect = () => {
     // }, 505);
   });
   conn.on('data', data => {
-    console.log(`\n 🐍 : ${data}\nPress ctrl + c to exit`);
+    console.log(`\n 🐍 : ${data}`);
   });
   return conn;
 };

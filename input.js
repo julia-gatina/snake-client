@@ -1,3 +1,5 @@
+const { Socket } = require('dgram');
+
 let connection;
 
 const setupInput = function (conn) {
@@ -29,15 +31,16 @@ const handleUserInput = function (key) {
     case 'd':
       connection.write('Move: right');
       break;
+    case '1':
+      connection.write('Say: it is workinnnnng!');
+      break;
+    case '2':
+      connection.write('Say: yay, lol!');
+      break;
     default:
       // otherwise do nothing
       break;
   }
-  //   "Move: up"
-
-  // "Move: left"
-
-  // "Move: down"
 };
 
 module.exports = setupInput;
