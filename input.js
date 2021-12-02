@@ -1,5 +1,3 @@
-const { Socket } = require('dgram');
-
 let connection;
 
 const setupInput = function (conn) {
