@@ -1,6 +1,7 @@
 const net = require('net');
 
 const connect = () => {
+  console.log('Connecting ...');
   const conn = net.createConnection({
     host: '165.227.47.243',
     port: 50541,
@@ -17,11 +18,9 @@ const connect = () => {
     // }, 505);
   });
   conn.on('data', data => {
-    console.log(`\n 🐍 : ${data}`);
+    console.log(`\n 🐍 : ${data}\nPress ctrl + c to exit`);
   });
   return conn;
 };
-
-console.log('Connecting ...');
 
 module.exports = connect;
